@@ -1,0 +1,5 @@
+{
+	"cmd": ["fab"],
+	"working_dir": "${project_path:${folder}}"
+
+}

@@ -1,0 +1,22 @@
+<snippet>
+	<content><![CDATA[
+def ${1:this}(${2:this}):
+    """
+    >>> 
+
+    """
+    return x * x
+
+def _test():
+    import doctest
+    doctest.testmod()
+
+if __name__ == "__main__":
+    _test()
+
+]]></content>
+	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+	<tabTrigger>doctest</tabTrigger>
+	<!-- Optional: Set a scope to limit where the snippet will trigger -->
+	<scope>source.python</scope>
+</snippet>

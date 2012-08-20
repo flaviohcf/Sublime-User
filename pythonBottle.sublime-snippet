@@ -1,0 +1,15 @@
+<snippet>
+	<content><![CDATA[
+from bottle import route, run
+
+@route('/${1:home}/:${2:name}')
+def index(${2:name}='World'):
+    return '<b>Hello %s!</b>' % ${2:name}
+
+run(host='localhost', port=8080)
+]]></content>
+	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+	<tabTrigger>bottle</tabTrigger>
+	<!-- Optional: Set a scope to limit where the snippet will trigger -->
+	<scope>source.python</scope>
+</snippet>

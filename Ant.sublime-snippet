@@ -1,0 +1,47 @@
+<snippet>
+	<content><![CDATA[
+<?xml version="1.0" encoding="UTF-8"?>
+  
+<project name="AntPython" default="${1:this}" basedir=".">
+    <description>Ant para projetos Python</description>
+
+    <!-- Property -->
+    <property environment="env"/>
+    <property name="python" value="/usr/bin/python2.7"/>
+
+    <!-- Exec -->
+    <target name="Test">
+        <antcall>
+            <target name="test"/>
+        </antcall>
+    </target>
+
+    <target name="Run">
+        <antcall>
+            <target name="run"/>
+        </antcall>
+    </target>
+
+    <target name="test">
+        <exec executable="python">
+            <arg line="${2:this}.py"/>
+        </exec>
+    </target>
+    <!-- ============================ -->
+
+    <!-- Targets -->
+    <target name="run">
+        <exec executable="python">
+            <arg line="${3:this}.py"/>
+        </exec>
+    </target>
+
+    <!-- =========================== -->
+
+</project>
+]]></content>
+	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+	<tabTrigger>antpy</tabTrigger>
+	<!-- Optional: Set a scope to limit where the snippet will trigger -->
+	<!-- <scope>source.xml</scope> -->
+</snippet>
